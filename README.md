@@ -1,4 +1,4 @@
-# Demo progject description
+# Demo project description
 
 1. home 화면
 ![image](https://user-images.githubusercontent.com/64457575/147431268-efc7ea16-f1e4-4399-90bf-79269d8a001b.png)
