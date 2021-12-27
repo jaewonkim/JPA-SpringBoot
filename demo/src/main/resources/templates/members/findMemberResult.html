@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header" />
+<body>
+<div class="container">
+    <div th:replace="fragments/bodyHeader :: bodyHeader" />
+    <div class="jumbotron">
+
+        ID : <b th:text="${member.id}"></b><br>
+        PASSWORD : <b th:text="${member.password}"></b><br>
+        <a class="btn btn-lg btn-secondary" href="/members/login">Login</a><br>
+    </div>
+    <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
+</body>
+</html>

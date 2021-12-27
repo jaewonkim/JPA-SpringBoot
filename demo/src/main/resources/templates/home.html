@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments/bodyHeader :: bodyHeader" />
+    <div class="jumbotron">
+        <h1>Demo-Studio</h1>
+        <p class="lead"><b>Studio rental and photo shoot reservation site</b></p>
+        <p class="lead">서비스를 이용하시려면 회원가입/로그인 이후 이용해주세요.</p>
+            <a class="btn btn-lg btn-secondary" href="/members/join">Join</a>
+            <a class="btn btn-lg btn-secondary" href="/members/login">Login</a><br>
+
+            <a href="/members/find" class="text-muted">  Forgot id or password...</a>
+        </p>
+    </div>
+    <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments/AfterLogin :: bodyHeader" />
+    <div class="jumbotron">
+        <h1>Demo-Studio</h1>
+        <p class="lead">Studio view</p>
+        <img src="image/1pic.jpg"  style="max-width:100%;height:auto"><br><br>
+        <img src="image/2pic.jpg"  style="max-width:100%;height:auto"><br><br>
+        <img src="image/3pic.jpg"  style="max-width:100%;height:auto"><br><br>
+        <img src="image/4pic.jpg"  style="max-width:100%;height:auto"><br><br>
+        <img src="image/5pic.jpg"  style="max-width:100%;height:auto"><br><br>
+        <a class="btn btn-lg btn-secondary" href="/dateList">DateList</a>
+        <a class="btn btn-lg btn-secondary" href="/reserv">Reservation</a><br><br>
+
+        <a href="/members/description" class="text-muted">Site Description and Introduction</a>
+        </p>
+    </div>
+    <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
+</body>
+</html>

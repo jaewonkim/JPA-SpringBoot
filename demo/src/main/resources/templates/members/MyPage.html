@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments/AfterLogin :: bodyHeader" />
+    <div class="jumbotron">
+        <h1>My Page</h1>
+        <a class="btn btn-lg btn-secondary" href="/members/editaccount">Change account-info</a><br><br>
+        <a class="btn btn-lg btn-secondary" href="/members/mylist">MyReservation</a><br><br>
+        <a href="/members/explain" class="text-muted">Site Description and Introduction</a>
+        </p>
+    </div>
+    <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header" />
+<style>
+ .fieldError {
+ border-color: #bd2130;
+ }
+
+ .tableContainer{
+    color:#0076BF;
+    margin: -10px 0px -10px 0px;
+    border-spacing: 10px;
+    empty-cells:show;
+
+
+}
+</style>
+<body>
+<div class="container">
+    <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+
+    <div>
+        <p class="lead">날짜별 예약 리스트</p>
+        <div>
+            <form th:object="${date}" class="form-inline">
+                <div class="form-group mb-2">
+                    <input type="date" th:value="*{reservationDate}" th:field="*{reservationDate}" min="2021-01-01" max="2021-12-31" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">검색</button>
+            </form>
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>내용</th>
+                <th>파트타임</th>
+                <th>예약날짜</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="item : ${reservations}">
+                <td th:text="${item.id}"></td>
+                <td th:text="${item.content}"></td>
+                <td th:text="${item.partTime}"></td>
+                <td th:text="${item.reservationDate}"></td>
+            </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <p class="lead">모든 예약 리스트</p>
+        <div style="height:200px; overflow:auto">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>내용</th>
+                    <th>파트타임</th>
+                    <th>예약날짜</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="item : ${all}">
+                    <td th:text="${item.id}"></td>
+                    <td th:text="${item.content}"></td>
+                    <td th:text="${item.partTime}"></td>
+                    <td th:text="${item.reservationDate}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <br/>
+    <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
+</body>
+</html>
